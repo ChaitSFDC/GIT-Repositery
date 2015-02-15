@@ -1,6 +1,6 @@
 /*******************************************************************
  * Custom controller for the "Multi-Select Related Controller" 
- * recipe. 
+ * recipe. Chait Testing comments added
  * Manages the demonstration Visualforce page. 
  *******************************************************************/
 public with sharing class AccountGroupController
