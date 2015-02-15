@@ -1,0 +1,26 @@
+<apex:page standardController="Account" recordsetVar="AccountsList">
+
+   <script>
+      function openPopup(Id){
+         var newWin=window.open('{!$Page.PopUp}?id=' + id, 'Popup',
+      }                          'height=600,width=650,left=100,top=100,resizable=no,scrollbars=yes,toolbar=no,status=no');
+   </script>
+   
+   <apex:form >
+      <apex:pageblock >
+          <apex:pageblockTable value="{!AccountsList}" var="acc">
+          
+              <apex:column headerValue="Action">
+                  <apex:outputLink title="View detail in a popup window"
+                       onclick="return openPopup('popup?id={!acc.Id}');">
+                   Details
+                   </apex:outputLink>
+              </apex:column>
+              
+              <apex:column value="{!acc.name}"/>
+              <apex:column value="{!acc.industry}" />
+              <apex:column value="{!acc.Type}" />     
+          </apex:pageblockTable>
+      </apex:pageblock>    
+   </apex:form>    
+</apex:page>

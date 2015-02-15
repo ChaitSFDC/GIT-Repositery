@@ -1,0 +1,8 @@
+<apex:component >
+  <apex:attribute name="Contact2" type="Contact" description="The contact to edit" required="true" />
+  <apex:pageBlockSection columns="3" title="Name">
+    <apex:inputField value="{!Contact2.Salutation}"/>
+    <apex:inputField value="{!Contact2.FirstName}"/>
+    <apex:inputField value="{!Contact2.LastName}"/>
+  </apex:pageBlockSection>
+</apex:component>

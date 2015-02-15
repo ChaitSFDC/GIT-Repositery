@@ -1,0 +1,13 @@
+<apex:page controller="CasesSidebarController" sidebar="false">
+   <apex:form >
+      <b><apex:outputtext value="Case Status Count"/></b>
+      <br/>
+      <apex:repeat value="{!caseCountByStatus}" var="key" >
+         <apex:outputpanel >
+             <b> {!key}:    </b> 
+            <apex:outputText value="{!caseCountByStatus[key]}" />
+         </apex:outputpanel> 
+         <br/>
+      </apex:repeat>
+   </apex:form>
+</apex:page>
